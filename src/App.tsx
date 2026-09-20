@@ -1,12 +1,9 @@
-import { useState } from 'react'
 import './App.css'
 import logo from './assets/logo.svg'
 import c from './assets/c.svg'
 import outline from './assets/outline.svg'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
       <article className='center' style={{paddingInline: '16px'}}>
