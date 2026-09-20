@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+:root {
+  --dark: #160C31;
+  --black-violet: #351D74;
+  --dark-violet: #532DB7; 
+  --juststudio-ultra-violet: #6E3BF3;
+  --light-violet: #7B4DF4;
+  --soft-violet: #9C79F7;
+  --white-violet: #BBA3FA;
+  --light: #D5C6FA;
+  --white: #EBE5FA;
+
+  --blue: #D4EEFF50;
+  --pink: #F5BCF750;
+
+  --f-main: "Rubik", -apple-system, BlinkMacSystemFont, "SF Pro", sans-serif;
+  --f-code: 'Source Code Pro', monospace;
+  --f-rmno: 'Rubik Mono One', var(--f-main);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: var(--f-main);
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+*:not(html):not(span):not(p), *:not(span):not(p)::before, *:not(span):not(p)::after {
+  border-radius: 16px;
+  overflow: hidden;
+}
+::selection {
+  background-color: var(--light-violet);
+  color: var(--white);
+}
+
+html {
+  background-color: var(--light);
+  color: var(--dark);
+}
+body {
+  overflow-y: auto;
+}
+
+h1, h1::before, h1::after, .rmo, .rmo::before, .rmo::after {
+  font-family: var(--f-rmno);
+  font-weight: 500;
+}
+h1, h1::before, h1::after {
+  font-size: clamp(1.8125rem, calc(.25rem + 5vw), 4rem);
+}
+h1, h1::before, h1::after, h2, h2::before, h2::after, h3, h3::before, h3::after, h4, h4::before, h4::after, h5, h5::before, h5L::after, h6, h6::before, h6::after {
+  filter: drop-shadow(2px 2px 2px var(--pink)) drop-shadow(-2px -2px 2px var(--blue));
+  text-align: center;
+}
+.rb, .rb::before, .rb::after {
+  font-family: var(--f-main);
+  font-weight: 700;
+}
+
+.nr {
+  border-radius: 0px !important;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--dark);
+  border: 2px solid var(--light);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--light);
+  border: 2px solid var(--dark);
+}
+
+::-webkit-scrollbar-track:hover {
+  background: var(--dark);
+}

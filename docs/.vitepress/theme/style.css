@@ -1,0 +1,25 @@
+/*
+    Main / Styles
+*/
+
+:root {
+    --vp-c-brand-1: #6e3bf3;
+    --vp-c-brand-2: #d5c6fa;
+}
+
+.VPNavBar, .VPNavBar .content-body, .VPLocalNav {
+    background: transparent !important;
+}
+.VPNavBar .content-body, .VPLocalNav {
+    backdrop-filter: blur(16px) !important;
+}
+
+.mermaid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.mermaid foreignObject:not(#Encode_Input foreignObject) {
+    overflow: visible;
+}
+
