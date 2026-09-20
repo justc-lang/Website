@@ -23,7 +23,6 @@ jobs:
       - run: |
           mkdir -p dist/docs
           cp -r docs/.vitepress/dist/* dist/docs/
-          cp CNAME dist/CNAME
           cp dist/index.html dist/404.html
           rm index.html
       - uses: cpina/github-action-push-to-another-repository@main
