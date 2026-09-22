@@ -359,12 +359,12 @@ body {
 }
 
 h1, h1:before, h1:after, .rmo, .rmo:before, .rmo:after {
-  font-family: var(--f-rmno);
   font-weight: 500;
+  font-family: var(--f-rmno) !important;
 }
 
 h1, h1:before, h1:after {
-  font-size: clamp(1.8125rem, .25rem + 5vw, 4rem);
+  font-size: clamp(1.8125rem, .25rem + 5vw, 4rem) !important;
 }
 
 h1, h1:before, h1:after, h2, h2:before, h2:after, h3, h3:before, h3:after, h4, h4:before, h4:after, h5, h5:before, h5L:after, h6, h6:before, h6:after {
@@ -373,8 +373,8 @@ h1, h1:before, h1:after, h2, h2:before, h2:after, h3, h3:before, h3:after, h4, h
 }
 
 .rb, .rb:before, .rb:after {
-  font-family: var(--f-main);
   font-weight: 700;
+  font-family: var(--f-main) !important;
 }
 
 .nr {
@@ -555,13 +555,13 @@ html, body, #root {
 }
 
 .i {
-  overflow: visible;
+  overflow: visible !important;
   filter: brightness(0) invert(75%) sepia(45%) saturate(187%) hue-rotate(215deg) brightness(99%) contrast(99%);
   -webkit-filter: brightness(0) invert(75%) sepia(45%) saturate(187%) hue-rotate(215deg) brightness(99%) contrast(99%);
 }
 
 .glow {
-  overflow: visible;
+  overflow: visible !important;
   filter: drop-shadow(0px 0px 0px var(--light)) drop-shadow(0px 0px 150px var(--light));
   -webkit-filter: drop-shadow(0px 0px 0px var(--light)) drop-shadow(0px 0px 150px var(--light));
   animation: glow 5s ease-in-out infinite;
@@ -661,7 +661,7 @@ html, body, #root {
 }
 .btn, .btn2 {
   padding: 8px;
-  border-radius: 32px;
+  border-radius: 32px !important;
   padding-inline: 16px;
   color: var(--light);
 }
@@ -678,7 +678,7 @@ html, body, #root {
   text-decoration-thickness: 2px;
   color: transparent;
   text-decoration-color: var(--light);
-  border-radius: 8px;
+  border-radius: 8px !important;
   text-wrap: nowrap;
   transform: scaleX(0) skew(20deg);
   translate: -50% 0%;
