@@ -44,18 +44,18 @@ body {
 }
 
 h1, h1::before, h1::after, .rmo, .rmo::before, .rmo::after {
-  font-family: var(--f-rmno);
+  font-family: var(--f-rmno) !important;
   font-weight: 500;
 }
 h1, h1::before, h1::after {
-  font-size: clamp(1.8125rem, calc(.25rem + 5vw), 4rem);
+  font-size: clamp(1.8125rem, calc(.25rem + 5vw), 4rem) !important;
 }
 h1, h1::before, h1::after, h2, h2::before, h2::after, h3, h3::before, h3::after, h4, h4::before, h4::after, h5, h5::before, h5L::after, h6, h6::before, h6::after {
   filter: drop-shadow(2px 2px 2px var(--pink)) drop-shadow(-2px -2px 2px var(--blue));
   text-align: center;
 }
 .rb, .rb::before, .rb::after {
-  font-family: var(--f-main);
+  font-family: var(--f-main) !important;
   font-weight: 700;
 }
 
