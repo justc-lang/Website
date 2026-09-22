@@ -2,7 +2,7 @@ const monacoScript = document.createElement('script');
 monacoScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.29.1/min/vs/loader.min.js';
 const monacoElement = document.createElement('div');
 monacoElement.id = "editor";
-monacoElement.style = "height: 70vh; overflow-y: clip; border-radius: 2px; width: calc(100% - 32px); margin-left: 16px; margin-bottom: 10vh";
+monacoElement.style = "height: 70vh; overflow-y: clip; border-radius: 2px; width: calc(100% - 32px); margin-left: 16px; margin-bottom: 10vh; outline: 8px solid var(--dark)";
 
 const monacoJUSTClang = {
         keywords: [
@@ -176,6 +176,22 @@ monacoScript.onload = function() {
     };
 
     require(["vs/editor/editor.main"], function() {
+        monaco.editor.defineTheme('justc', {
+            base: 'vs-dark',
+            inherit: true,
+            rules: [
+                { token: 'comment', foreground: '351D74' },
+                { token: 'keyword', fontStyle: 'bold' }
+            ],
+            colors: {
+                'editor.background': '#160C31',
+                'editor.foreground': '#D5C6FA',
+                'editorLineNumber.foreground': '#6E3BF3',
+                'editor.selectionBackground': '#6E3BF3',
+                'editorCursor.foreground': '#6E3BF3'
+            }
+        });
+
         monaco.languages.register({ id: 'justc' });
         monaco.languages.setMonarchTokensProvider('justc', monacoJUSTClang);
 
@@ -455,6 +471,7 @@ monacoScript.onload = function() {
         var editor = monaco.editor.create(document.getElementById("editor"), {
             value: `-- Type JUSTC code here...`,
             language: "justc",
+            theme: "justc",
             fontSize: 14,
             minimap: { enabled: true },
             scrollBeyondLastLine: false,
@@ -463,7 +480,7 @@ monacoScript.onload = function() {
             folding: true,
             lineDecorationsWidth: 10,
             lineNumbersMinChars: 3,
-            "semanticHighlighting.enabled": true
+            "semanticHighlighting.enabled": true,
         });
 
         const editorElement = document.getElementById("editor");
