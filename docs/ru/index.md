@@ -1,1 +1,0 @@
-# The JUSTC Programming Language
