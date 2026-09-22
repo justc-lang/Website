@@ -13,7 +13,7 @@ function App() {
             <p className='rb c desc'>A powerful scripting language designed for automation.</p>
             <div className='flex2' style={{marginTop: '16px'}}>
               <a className='btn' data-text="Get Started" href='/docs/'>Get Started</a>
-              <a className='btn2' data-text="Try JUSTC online" href='#playground' id='pg' style={{display: 'none'}}>Try JUSTC online</a>
+              <a className='btn2' data-text="Try JUSTC online" href='#playground'>Try JUSTC online</a>
             </div>
           </div>
           <div>

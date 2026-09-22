@@ -496,4 +496,3 @@ document.body.appendChild(monacoElement);
 
 document.getElementById('root').style.marginBottom = '5vh';
 document.body.style.overflowY = 'auto';
-document.getElementById('pg').style.display = null;
