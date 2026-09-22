@@ -355,8 +355,11 @@ html {
 }
 
 body {
-  scroll-behavior: smooth;
   overflow-y: auto;
+}
+
+html, body {
+  scroll-behavior: smooth;
 }
 
 h1, h1:before, h1:after, .rmo, .rmo:before, .rmo:after {
