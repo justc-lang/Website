@@ -11,7 +11,10 @@ function App() {
           <div className='nr'>
             <h1 className='c'>JUSTC</h1>
             <p className='rb c desc'>A powerful scripting language designed for automation.</p>
-            <div className='flex2' style={{marginTop: '16px'}}><a className='btn' data-text="Get Started">Get Started</a><a className='btn2' data-text="Try JUSTC online">Try JUSTC online</a></div>
+            <div className='flex2' style={{marginTop: '16px'}}>
+              <a className='btn' data-text="Get Started" href='/docs/'>Get Started</a>
+              <a className='btn2' data-text="Try JUSTC online" href='#playground' id='pg' style={{display: 'none'}}>Try JUSTC online</a>
+            </div>
           </div>
           <div>
             <img src={logo} className='logo'/>

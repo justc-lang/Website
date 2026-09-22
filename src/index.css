@@ -19,14 +19,14 @@
   --f-rmno: 'Rubik Mono One', var(--f-main);
 }
 
-*, *::before, *::after {
+*:not(#editor):not(#editor *), *:not(#editor):not(#editor *)::before, *:not(#editor):not(#editor *)::after {
   box-sizing: border-box;
   font-family: var(--f-main);
   font-size: 16px;
   user-select: none;
   -webkit-user-drag: none;
 }
-*:not(html):not(span):not(p), *:not(span):not(p)::before, *:not(span):not(p)::after {
+*:not(html):not(span):not(p):not(#editor):not(#editor *), *:not(span):not(p):not(#editor):not(#editor *)::before, *:not(span):not(p):not(#editor):not(#editor *)::after {
   border-radius: 16px;
   overflow: hidden;
 }

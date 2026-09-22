@@ -488,6 +488,7 @@ const heading = document.createElement('h1');
 heading.innerText = 'Playground';
 heading.classList.add('c', 'rb');
 heading.style.marginBottom = '5vh';
+heading.id = 'playground';
 document.body.appendChild(heading);
 
 document.head.appendChild(monacoScript);
@@ -495,3 +496,4 @@ document.body.appendChild(monacoElement);
 
 document.getElementById('root').style.marginBottom = '5vh';
 document.body.style.overflowY = 'auto';
+document.getElementById('pg').style.display = null;
