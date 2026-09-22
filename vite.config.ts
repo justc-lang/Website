@@ -19,6 +19,7 @@ export default defineConfig({
               wrap_func_args: false,
               inline_script: true
           }
-      }
+      },
+      cssMinify: false
   }
 })
