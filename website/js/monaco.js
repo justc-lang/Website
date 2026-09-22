@@ -2,7 +2,7 @@ const monacoScript = document.createElement('script');
 monacoScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.29.1/min/vs/loader.min.js';
 const monacoElement = document.createElement('div');
 monacoElement.id = "editor";
-monacoElement.style = "height: 80vh; outline: 2px solid gray; overflow-y: clip; border-radius: 2px;";
+monacoElement.style = "height: 80vh; overflow-y: clip; border-radius: 2px; padding-inline: 16px";
 
 const monacoJUSTClang = {
         keywords: [
@@ -484,7 +484,14 @@ monacoScript.onerror = function() {
     monacoElement.innerHTML = "<p style='color: red; padding: 20px;'>Failed to load code editor. Please check your internet connection.</p>";
 };
 
+const heading = document.createElement('h1');
+heading.innerText = 'Playground';
+heading.classList.add('c', 'rb');
+heading.style.marginBottom = '5vh';
+document.body.appendChild(heading);
+
 document.head.appendChild(monacoScript);
 document.body.appendChild(monacoElement);
 
-document.body.appendChild(document.createElement('hr'));
+document.getElementById('root').style.marginBottom = '5vh';
+document.body.style.overflowY = 'auto';
