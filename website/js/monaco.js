@@ -180,6 +180,7 @@ monacoScript.onload = function() {
             base: 'vs-dark',
             inherit: true,
             rules: [
+                { token: '', foreground: 'D5C6FA' },
                 { token: 'comment', foreground: '532DB7' },
                 { token: 'keyword', fontStyle: 'bold' },
                 { token: 'type', fontStyle: 'italic' },
@@ -193,6 +194,11 @@ monacoScript.onload = function() {
                 'minimap.background': '#160C31',
                 'editor.lineHighlightBorder': '#00000000',
                 'editor.lineHighlightBackground': '#351D74',
+                'scrollbar.shadow': '#00000055',
+                'scrollbarSlider.background': '#6E3BF333',
+                'scrollbarSlider.hoverBackground': '#6E3BF366',
+                'scrollbarSlider.activeBackground': '#6E3BF3aa',
+                'editorActiveLineNumber.foreground': '#6E3BF3',
             }
         });
 
