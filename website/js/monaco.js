@@ -2,7 +2,7 @@ const monacoScript = document.createElement('script');
 monacoScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.29.1/min/vs/loader.min.js';
 const monacoElement = document.createElement('div');
 monacoElement.id = "editor";
-monacoElement.style = "height: 80vh; overflow-y: clip; border-radius: 2px; padding-inline: 16px";
+monacoElement.style = "height: 70vh; overflow-y: clip; border-radius: 2px; width: calc(100% - 32px); margin-left: 16px; margin-bottom: 10vh";
 
 const monacoJUSTClang = {
         keywords: [
@@ -489,6 +489,7 @@ heading.innerText = 'Playground';
 heading.classList.add('c', 'rb');
 heading.style.marginBottom = '5vh';
 heading.id = 'playground';
+heading.style.marginLeft = '16px';
 document.body.appendChild(heading);
 
 document.head.appendChild(monacoScript);
